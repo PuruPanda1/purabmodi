@@ -32,7 +32,7 @@ export default function Skills() {
             }}
 
             className='h-screen flex realtive overflow-hidden flex-col text-center md:text-left md:flex-row max-w-full px-10 justify-center mx-auto items-center relative'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
+            <h3 className='absolute top-24 pl-4 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
 
             <h3
                 className="top-36 uppercase tracking-[3px] text-sm text-gray-500 absolute"
