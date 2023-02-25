@@ -68,9 +68,9 @@ export default function Projects() {
                                 src={item.photo} alt="project image"
                             />
                             <div className="space-y-5 px-0 md:px-10 max-w-6xl text-center">
-                                <a href={item.link} target='_blank' className="text-3xl md:text-4xl font-semibold text-center underline decoration-[#F7AB0A]/50 md:text-center">
+                                <Link href={item.link} target='_blank' rel="noopener noreferrer" className="text-3xl md:text-4xl font-semibold text-center underline decoration-[#F7AB0A]/50 md:text-center">
                                     {item.name}
-                                </a>
+                                </Link>
                                 <p className="text-sm md:text-lg text-center md:text-left">
                                     {item.desc}
                                 </p>
