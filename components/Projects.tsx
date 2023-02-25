@@ -1,11 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Projects() {
     const projects = [
-        { id: 0, name: "BudgetWise", desc: "This is one of the best money management apps which you can find in playstore. Whether you are a student, a salaried employee, a business person or a person who wants to manage their expenses then this application will help you to manage and track your expenses on the go", link: "https://play.google.com/store/apps/details?id=com.purabmodi.payment&hl=en&gl=US", photo: "https://play-lh.googleusercontent.com/PKDcyN1UvmexM3yc37wB_BL9r6urewMlK2LMY-r3ZTKwWI2Fxvsocp2mmELmv0UXcg=w416-h235-rw" },
-        { id: 1, name: "CovidSmasher", desc: "An android application to fight against Covid", link: "https://github.com/PuruPanda1/CovidSmasherAndroidApp", photo: "https://play-lh.googleusercontent.com/PKDcyN1UvmexM3yc37wB_BL9r6urewMlK2LMY-r3ZTKwWI2Fxvsocp2mmELmv0UXcg=w416-h235-rw" },
-        { id: 2, name: "Food Canteen", desc: "a php based website made for food canteen to manage canteen orders.", link: "https://github.com/PuruPanda1/foodcanteen", photo: "https://play-lh.googleusercontent.com/PKDcyN1UvmexM3yc37wB_BL9r6urewMlK2LMY-r3ZTKwWI2Fxvsocp2mmELmv0UXcg=w416-h235-rw" },
+        {
+            id: 0,
+            name: "BudgetWise",
+            desc: "This is one of the best money management apps which you can find in playstore. Whether you are a student, a salaried employee, a business person or a person who wants to manage their expenses then this application will help you to manage and track your expenses on the go",
+            link: "https://play.google.com/store/apps/details?id=com.purabmodi.payment&hl=en&gl=US",
+            photo: "https://firebasestorage.googleapis.com/v0/b/photobackup-d2951.appspot.com/o/budgetwiseMac.png?alt=media&token=e7fa2eeb-4897-4d28-9881-def03f0d5d7a"
+        },
+
+        {
+            id: 1,
+            name: "Personal Portfolio",
+            desc: "My personal portfolio to showcase my skill set and my projects.",
+            link: "https://purabmodi.vercel.app/",
+            photo: "https://firebasestorage.googleapis.com/v0/b/photobackup-d2951.appspot.com/o/portfoliophoto.png?alt=media&token=ffe61e74-e6b4-4a45-8ee3-a944fafbc81d"
+        },
+        {
+            id: 2,
+            name: "Food Canteen",
+            desc: "a php based website made for food canteen to manage canteen orders.",
+            link: "https://github.com/PuruPanda1/foodcanteen",
+            photo: "https://firebasestorage.googleapis.com/v0/b/photobackup-d2951.appspot.com/o/Rectangle.png?alt=media&token=df054e19-b7d7-4801-95a5-5c162ea34a4e"
+        },
         // {id:3,name:"CovidSmasher",desc:"An android application to fight against Covid",link:"https://github.com/PuruPanda1/CovidSmasherAndroidApp",photo:""},
         // {id:4,name:"CovidSmasher",desc:"An android application to fight against Covid",link:"https://github.com/PuruPanda1/CovidSmasherAndroidApp",photo:""},
         // {id:5,name:"CovidSmasher",desc:"An android application to fight against Covid",link:"https://github.com/PuruPanda1/CovidSmasherAndroidApp",photo:""},
@@ -44,11 +64,13 @@ export default function Projects() {
                                 viewport={{
                                     once: true
                                 }}
-                                src={item.photo} alt="project image" />
-                            <div className="space-y-5 px-0 md:px-10 max-w-6xl">
-                                <h4 className="text-4xl font-semibold text-center underline decoration-[#F7AB0A]/50">
+                                className='object-contain p-4 w-60 mb-[-95px] h-60 md:w-[512px] md:h-[512px] md:mb-[-200px]'
+                                src={item.photo} alt="project image"
+                            />
+                            <div className="space-y-5 px-0 md:px-10 max-w-6xl text-center">
+                                <a href={item.link} target='_blank' className="text-3xl md:text-4xl font-semibold text-center underline decoration-[#F7AB0A]/50 md:text-center">
                                     {item.name}
-                                </h4>
+                                </a>
                                 <p className="text-sm md:text-lg text-center md:text-left">
                                     {item.desc}
                                 </p>

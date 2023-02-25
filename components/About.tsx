@@ -32,6 +32,9 @@ export default function About() {
                 transition={{
                     duration: 1.2,
                 }}
+                viewport={{
+                    once:true
+                }}
                 className='mb-10 mt-32 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg
                 md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]'
                 src='https://firebasestorage.googleapis.com/v0/b/bitsplease-c45fa.appspot.com/o/images%2Fpurabmodi.jpg?alt=media&token=49e97aac-6134-4bcb-9bff-7f0ca4046d84'

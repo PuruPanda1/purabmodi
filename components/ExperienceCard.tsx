@@ -22,7 +22,7 @@ export interface Summary {
 
 export default function ExperienceCard(props: IAppProps) {
     return (
-        <article className="flex flex-col rounded-lg space-y-7 flex-shrink-0 items-center w-[500px] md:w-[500px] xl:w-[500px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col rounded-lg space-y-7 flex-shrink-0 items-center w-[400px] md:w-[500px] xl:w-[500px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
             <motion.img
                 initial={{
                     y: -100,
@@ -51,13 +51,13 @@ export default function ExperienceCard(props: IAppProps) {
                         return (
                             <img
                                 key={item.id}
-                                className="h-6 w-10 rounded-full"
+                                className="h-8 w-12 rounded-full"
                                 src={item.name} alt="" />
                         )
                     })}
 
                 </div>
-                <p className="uppercase py-5 md:py-2 text-gray-300">Started .. ended ..</p>
+                <p className="uppercase py-5 text-gray-300">Started .. ended ..</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">
                     {props.summary.map((item) => {
                         return (
