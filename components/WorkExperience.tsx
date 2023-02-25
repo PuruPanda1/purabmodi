@@ -20,7 +20,7 @@ export default function WorkExperience() {
         mx-auto items-center relative'>
             <h3 className='absolute top-24 pl-4 uppercase tracking-[20px] text-gray-500 text-2xl'>Experience</h3>
 
-            <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory'>
+            <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
                 <ExperienceCard jobRole={"Android Internship"} companyName={"MenDoFeel"} date={'22-10-2021'} summary={[
                     {id:0,name:"I worked as Android Intern there"},
                     {id:1,name:"I worked on the News Feature which shows snapping news."}

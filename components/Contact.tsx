@@ -29,16 +29,16 @@ export default function Contact() {
             viewport={{
                 once: true
             }}
-            className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'>
+            className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
             <h3 className='absolute top-24 pl-4 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
 
-            <div className="flex flex-col space-y-10">
-                <h4 className="text-4xl font-semibold text-center">
+            <div className="flex flex-col space-y-5">
+                <h4 className="text-3xl font-semibold text-center">
                     I have got just what you need.{" "}
                     <span className="decoration-[#F7AB0A] underline">Lets Talk</span>
                 </h4>
 
-                <div className="space-y-10">
+                <div className="space-y-2">
                     <div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
                         <p>+91 9073893382</p>
@@ -54,7 +54,7 @@ export default function Contact() {
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
-                    <div className="space-x-2 flex">
+                    <div className="space-y-2 md:space-x-2 flex flex-col md:flex-row">
                         <input {...register('name')} className="contactInput" type="text" placeholder="Name" />
                         <input {...register('email')} className="contactInput" type="email" placeholder="Email" />
                     </div>
