@@ -13,7 +13,8 @@ type Inputs = {
 export default function Contact() {
     const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = formData => {
-        window.location.href = `mailto:purabdev2002@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} ${formData.email}`
+        console.log(formData)
+        window.location.href = `mailto:purabdev2002@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`
     };
     return (
         <motion.div
@@ -54,7 +55,7 @@ export default function Contact() {
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
-                    <div className="space-y-2 md:space-x-2 flex flex-col md:flex-row">
+                    <div className="space-y-2 space-x-0 md:space-y-0 md:space-x-2 flex flex-col md:flex-row">
                         <input {...register('name')} className="contactInput" type="text" placeholder="Name" />
                         <input {...register('email')} className="contactInput" type="email" placeholder="Email" />
                     </div>

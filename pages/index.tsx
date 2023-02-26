@@ -42,17 +42,17 @@ export default function Home() {
       </section>
 
       <section id='contact' className='snap-center'>
-        <Contact/>
+        <Contact />
       </section>
 
       <Link href='#hero'>
-      <footer className='sticky bottom-5 w-full cursor-pointer'>
-        <div className='flex items-center justify-center'>
-          <img
-          className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-           src="https://firebasestorage.googleapis.com/v0/b/bitsplease-c45fa.appspot.com/o/images%2Fpurabmodi.jpg?alt=media&token=49e97aac-6134-4bcb-9bff-7f0ca4046d84" alt="" />
-        </div>
-      </footer>
+        <footer className='sticky bottom-5 w-full cursor-pointer'>
+          <div className='flex items-center justify-center'>
+            <img
+              className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+              src="https://firebasestorage.googleapis.com/v0/b/bitsplease-c45fa.appspot.com/o/images%2Fpurabmodi.jpg?alt=media&token=49e97aac-6134-4bcb-9bff-7f0ca4046d84" alt="" />
+          </div>
+        </footer>
       </Link>
 
     </div>
