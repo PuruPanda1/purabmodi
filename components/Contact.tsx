@@ -33,13 +33,13 @@ export default function Contact() {
             className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
             <h3 className='absolute top-24 pl-4 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
 
-            <div className="flex flex-col space-y-5">
-                <h4 className="text-3xl font-semibold text-center">
+            <div className="mt-10 md:mt-0 flex flex-col space-y-5">
+                <h4 className="text-2xl md:text-3xl font-semibold text-center">
                     I have got just what you need.{" "}
                     <span className="decoration-[#F7AB0A] underline">Lets Talk</span>
                 </h4>
 
-                <div className="space-y-2">
+                <div className="space-y-1 md:space-y-2">
                     <div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
                         <p>+91 9073893382</p>
