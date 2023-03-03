@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from "react-hook-form";
+import { sendContactForm } from "@/utils/api";
 
 type Inputs = {
     name: string;
@@ -12,9 +13,10 @@ type Inputs = {
 
 export default function Contact() {
     const { register, handleSubmit } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = formData => {
+    const onSubmit: SubmitHandler<Inputs> = async (formData) => {
         console.log(formData)
-        window.location.href = `mailto:purabdev2002@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`
+        await sendContactForm(formData)
+        // window.location.href = `mailto:purabdev2002@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`
     };
     return (
         <motion.div
