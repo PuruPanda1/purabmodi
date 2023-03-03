@@ -15,7 +15,7 @@ export default function Projects() {
         {
             id: 1,
             name: "Personal Portfolio",
-            desc: "My personal portfolio to showcase my skill set and my projects.",
+            desc: "I created a website to showcase my work and skills. This website includes sections such as an introduction, portfolio of work samples, about page, contact information. Technologies I used in this project are Next js using TypeScript.",
             link: "https://purabmodi.vercel.app/",
             photo: "https://firebasestorage.googleapis.com/v0/b/photobackup-d2951.appspot.com/o/portfoliophoto.png?alt=media&token=ffe61e74-e6b4-4a45-8ee3-a944fafbc81d"
         },
@@ -64,7 +64,7 @@ export default function Projects() {
                                 viewport={{
                                     once: true
                                 }}
-                                className='object-contain p-4 w-60 mb-[-95px] h-60 md:w-[512px] md:h-[512px] md:mb-[-200px]'
+                                className='object-contain p-4 w-60 mb-[-95px] h-60 md:w-[512px] md:h-[512px] md:mb-[-100px]'
                                 src={item.photo} alt="project image"
                             />
                             <div className="space-y-5 px-0 md:px-10 max-w-6xl text-center">

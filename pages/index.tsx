@@ -45,7 +45,7 @@ export default function Home() {
         <Contact />
       </section>
 
-      <Link href='#hero'>
+      {/* <Link href='#hero'>
         <footer className='sticky bottom-16 md:bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
             <img
@@ -53,7 +53,7 @@ export default function Home() {
               src="https://firebasestorage.googleapis.com/v0/b/bitsplease-c45fa.appspot.com/o/images%2Fpurabmodi.jpg?alt=media&token=49e97aac-6134-4bcb-9bff-7f0ca4046d84" alt="" />
           </div>
         </footer>
-      </Link>
+      </Link> */}
 
     </div>
   )

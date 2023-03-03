@@ -2,10 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export interface IAppProps {
+    experience: Experience
+}
+
+export interface Experience {
+    id:number,
     companyLogo: string,
-    jobRole: String,
-    companyName: String,
-    date: String,
+    jobRole: string,
+    companyName: string,
+    startDate: string,
+    endDate: string,
     summary: Summary[],
     techUsed: Technology[]
 }
@@ -22,7 +28,7 @@ export interface Summary {
 
 export default function ExperienceCard(props: IAppProps) {
     return (
-        <article className="flex flex-col rounded-lg space-y-7 flex-shrink-0 items-center w-[400px] md:w-[500px] xl:w-[500px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col rounded-lg space-y-7 flex-shrink-0 items-center w-[400px] md:w-[700px] xl:w-[700px] snap-center p-10 bg-[#292929] hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
             <motion.img
                 initial={{
                     y: -100,
@@ -39,15 +45,15 @@ export default function ExperienceCard(props: IAppProps) {
                     once: true
                 }}
                 className="h-32 w-32 mx-auto object-cover xl:w-[100px] xl:h-[100px] rounded-full object-center"
-                src={`${props.companyLogo}`}
+                src={`${props.experience.companyLogo}`}
                 alt="MenDoFeel"
             />
             <div className="px-0 md:px-10">
-                <h4 className="text-4xl font-light">{props.jobRole}</h4>
-                <p className="font-bold text-2xl mt-1">{props.companyName}</p>
-                <div className="flex space-x-2 my-2 mt-5">
+                <h4 className="text-4xl font-light">{props.experience.jobRole}</h4>
+                <p className="font-bold text-2xl mt-1">{props.experience.companyName}</p>
+                <div className="flex space-x-2 my-2 mt-5 justify-center">
                     {/* tech used */}
-                    {props.techUsed.map((item) => {
+                    {props.experience.techUsed.map((item) => {
                         return (
                             <img
                                 key={item.id}
@@ -57,9 +63,9 @@ export default function ExperienceCard(props: IAppProps) {
                     })}
 
                 </div>
-                <p className="uppercase py-5 text-gray-300">Started .. ended ..</p>
+                <p className="uppercase py-5 text-gray-300">{props.experience.startDate + ' - ' + props.experience.endDate}</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">
-                    {props.summary.map((item) => {
+                    {props.experience.summary.map((item) => {
                         return (
                             <li key={item.id}>{item.name}</li>
                         )
