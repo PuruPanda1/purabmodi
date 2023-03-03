@@ -38,7 +38,7 @@ export default function Skills() {
                 className="top-36 uppercase tracking-[3px] text-sm text-gray-500 absolute"
             >Hover over a skill for profieciency</h3>
 
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-5">
+            <div className=" grid grid-cols-3 md:grid-cols-4 gap-5">
                 {skills.map((item) => {
                     return (
                         <Skill key={item.id} skillName={item.name} skillImage={item.photo} rate={item.rate} isLeft={item.isLeft} />
