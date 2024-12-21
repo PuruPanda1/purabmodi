@@ -1,0 +1,1 @@
+This is the official website of the BitsPlease Technical Club of Sambhram Institute of Technology
