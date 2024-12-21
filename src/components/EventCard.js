@@ -15,7 +15,7 @@ export default class EventCard extends React.Component {
         return (
             <div className="w-full md:w-1/4">
                 <div className="flex flex-col items-center px-10 py-5">
-                    <img className="w-44 h-44 mb-3 rounded-full object-fill shadow-lg" src={require(`../images/purabmodi.jpg`)} alt={this.state.name} />
+                    <img className="w-44 h-44 mb-3 rounded-full object-fill shadow-lg" src={require(`../images/pm_image_1.jpg`)} alt={this.state.name} />
                     <span className="text-sm text-gray-500 dark:text-gray-400">{this.state.date}</span>
                     <h5 className="text-xl font-medium text-gray-900 dark:text-white">{this.state.name}</h5>
                     <div className="flex space-x-3">

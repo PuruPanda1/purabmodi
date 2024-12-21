@@ -3,12 +3,12 @@ import CardLayout from './CardLayout';
 import UpcomingEventLayout from './UpcomingEventLayout';
 import OrganizerLayout from './OrganizerLayout';
 import FAQ from './FAQ';
-import BannerImage from './BannerImage'
+import Hero from './Hero'
 
 function Home() {
     return (
         <div>
-            <BannerImage />
+            <Hero />
             <div className="container mx-auto ">
                 <h1 className='font-sans pt-10 text-5xl from-stone-800 dark:text-white'>Perks of Joining BitsPlease</h1>
                 <CardLayout />

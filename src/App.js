@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
-import Events from './components/Events';
+import Events from './components/Project';
 import {
   BrowserRouter as Router,
   Routes,

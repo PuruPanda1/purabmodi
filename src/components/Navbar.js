@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
     const [theme, setTheme] = useState('dark');
 
@@ -19,7 +20,7 @@ function Navbar() {
     const navigation = [
         { id: 0, name: 'Home', url: "/" },
         { id: 1, name: 'About', url: "/about" },
-        { id: 2, name: 'Events', url: "/events" },
+        { id: 2, name: 'Projects', url: "/projects" },
         { id: 3, name: 'Contact', url: "/contact" },
     ];
 
@@ -33,7 +34,18 @@ function Navbar() {
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <div className="left flex justify-center">
                     <Link to="/" className="flex items-center">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">BitsPlease</span>
+
+                        <div className="w-10 h-10 rounded-full bg-[#36a6be] flex items-center justify-center mr-2">
+                            <img
+                                src={require(`../images/logo.png`)}
+                                alt="Logo"
+                                className="w-full h-full object-cover rounded-full"
+                            />
+                        </div>
+                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                            Purab Modi
+                        </span>
+
                     </Link>
                     <button id="theme-toggle" type="button" onClick={handleThemeSwitch} className="mx-3 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                         {theme === 'light' ? <svg id="theme-toggle-dark-icon" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> :
@@ -42,7 +54,14 @@ function Navbar() {
                 </div>
                 <div className="flex md:order-2">
 
-                    <button onClick={navigate} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+                    <button
+                        onClick={() => navigate("/contact")}
+                        type="button"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex items-center"
+                    >
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        Get In Touch
+                    </button>
                     <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
