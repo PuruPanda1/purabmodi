@@ -11,12 +11,13 @@ function CardLayout(props) {
 
     // Toggle modal visibility
     const openModal = (n) => {
-        console.log(n);
+        document.body.style.overflow = 'hidden';
         setIsModalOpen(true);
         setSelectedProject(projects[n]);
     };
 
     const closeModal = () => {
+        document.body.style.overflow = '';
         setIsModalOpen(false);
     };
 
@@ -51,7 +52,7 @@ function CardLayout(props) {
                     {/* Modal Sheet for details */}
                     {isModalOpen && selectedProject && (
                         <div
-                            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+                            className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50 "
                             onClick={closeModal} // Close modal when clicking outside
                         >
                             <div
