@@ -14,9 +14,6 @@ const Experience = () => {
                 </ul>
             )
         },
-
-    ];
-    const experience2 = [
         {
             year: "Mar '24 - Jun '24",
             title: "DIVE IN 2 DIGITAL | Android Developer Internship",
@@ -28,6 +25,9 @@ const Experience = () => {
                 </ul>
             )
         },
+
+    ];
+    const experience2 = [
         {
             year: "Oct '22 - Dec '22",
             title: "MENDOFEEL CO. | Android Developer Internship",
@@ -38,7 +38,26 @@ const Experience = () => {
                     <li className="mb-2">Implemented MVVM Architecture with Repository pattern for better performance.</li>
                 </ul>
             )
-        }
+        },
+        {
+            year: "Oct '21 - Dec '21",
+            title: "BYJUS | Marketing Intern",
+            description: (
+                <ul className="list-disc ml-5 text-sm text-gray-600">
+                    <li className="mb-2">Learned about generating leads</li>
+                    <li className="mb-2">Generated more than 100+ leads during my internship.</li>
+                </ul>
+            )
+        },
+        {
+            year: "Mar '21 - Aug '21",
+            title: "SIREN ELECTRICALS CAL | Accountant",
+            description: (
+                <ul className="list-disc ml-5 text-sm text-gray-600">
+                    <li className="mb-2">Prepared and analyzed monthly and annual financial statements</li>
+                </ul>
+            )
+        },
     ];
 
     return (

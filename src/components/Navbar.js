@@ -55,7 +55,7 @@ function Navbar() {
                     >
                         <div className="w-10 h-10 rounded-full bg-[#36a6be] flex items-center justify-center mr-2">
                             <img
-                                src={require(`../images/logo.png`)}
+                                src="/images/logo.png"
                                 alt="Logo"
                                 className="w-full h-full object-cover rounded-full"
                             />

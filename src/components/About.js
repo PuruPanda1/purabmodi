@@ -2,6 +2,12 @@ import React from 'react'
 import ImageCarousel from './ImageCarousel'
 
 function About(props) {
+  const images =[
+    "/images/hero_image.jpg",
+    "/images/pm_image_1.jpg",
+    "/images/pm_image_2.jpg",
+    "/images/pm_image_3.jpg",
+    ]
   return (
     <div className='h-auto md:h-screen'>
       <h1 id='about' className=' font-sans pt-10 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>About</h1>
@@ -9,7 +15,7 @@ function About(props) {
         className='pt-6 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
       >
 
-        <ImageCarousel />
+        <ImageCarousel images={images} />
 
 
         <div className='space-y-6 px-0 md:px-10'>

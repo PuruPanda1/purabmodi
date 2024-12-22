@@ -88,7 +88,7 @@ function Hero() {
                     }}
                 >
                     <img
-                        src={require(`../images/hero_image.jpg`)} // Replace with your image path
+                        src="/images/hero_image.jpg" // Replace with your image path
                         alt="Profile"
                         className="w-full h-full object-cover"
                     />

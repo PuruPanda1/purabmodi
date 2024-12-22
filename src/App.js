@@ -4,13 +4,11 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
-import Events from './components/Project';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import JoinForm from './components/JoinForm';
 
 function App() {
   return (
@@ -21,8 +19,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/join" element={<JoinForm />} />
         </Routes>
       </Router>
       <Footer />

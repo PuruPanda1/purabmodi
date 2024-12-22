@@ -1,99 +1,141 @@
 import React from 'react'
-import { Player, Controls } from '@lottiefiles/react-lottie-player'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useState } from 'react';
+import { projects } from '../components/Constant';
+import ImageCarousel from './ImageCarousel';
+
 
 function CardLayout(props) {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Toggle modal visibility
+    const openModal = (n) => {
+        console.log(n);
+        setIsModalOpen(true);
+        setSelectedProject(projects[n]);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const [selectedProject, setSelectedProject] = useState(projects[0]);
+
     return (
-        <section className='container mx-auto flex flex-col justify-center  md:flex-row w-full p-10 gap-5'>
+        <section className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 p-10">
+            {/* Loop around the projects variable and generate cards */}
+            {projects.map((project, index) => (
+                <div>
+                    <div key={index} className="cursor-pointer max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" onClick={() => { openModal(index) }}>
+                        <div className="flex justify-center items-center">
+                            <DotLottieReact
+                                src={project.animation}
+                                loop
+                                autoplay
+                                style={{ height: '125px', width: '125px' }}
+                            />
+                        </div>
+                        <div className="pb-5 px-5">
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
 
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#"  style={{marginBottom: '-20px'}}>
-                    <Player
-                        autoplay
-                        loop
-                        src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
-                        style={{ height: '125px', width: '100%' }}
-                    >
+                            {/* Tech Stack */}
+                            {project.techStack && (
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                    <strong>Tech Stack:</strong> {project.techStack.join(', ')}
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                    {/* Modal Sheet for details */}
+                    {isModalOpen && selectedProject && (
+                        <div
+                            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+                            onClick={closeModal} // Close modal when clicking outside
+                        >
+                            <div
+                                className="bg-white p-8 rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto relative"
+                                onClick={(e) => e.stopPropagation()} // Prevent click propagation
+                            >
+                                <button
+                                    className="absolute top-4 right-4 text-gray-500 dark:text-gray-400"
+                                    onClick={closeModal}
+                                >
+                                    ×
+                                </button>
+                                <div className="flex flex-col md:flex-row gap-8">
+                                    {/* Conditionally render carousel and text based on orientation */}
+                                    {selectedProject.orientation === 'potrait' ? (
+                                        <div className="flex flex-row gap-8">
+                                            <div className="w-1/2">
+                                                <ImageCarousel images={selectedProject.images} contain={true} />
+                                            </div>
+                                            <div className="w-1/2">
 
-                        <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+                                                <h3 className="text-4xl font-bold mt-6 text-center text-gray-900 dark:text-white relative inline-block">
+                                                    {selectedProject.title}
+                                                    <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"></span>
+                                                </h3>
 
-                    </Player>
-                </a>
-                <div className="pb-5 px-5">
-                    <a href="#">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Hands On Sessions</h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                                {/* Project Description */}
+                                                <p className="text-lg text-gray-700 dark:text-gray-400 mt-4 leading-relaxed text-center max-w-3xl mx-auto">{selectedProject.long_desc}</p>
 
+                                                {/* Project Objectives */}
+                                                <div className="mt-6">
+                                                    <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Objectives</h2>
+                                                    <ul className="list-disc list-inside mt-4 space-y-2">
+                                                        {selectedProject.objectives.map((objective, index) => (
+                                                            <li key={index} className="text-gray-700 dark:text-gray-400 text-lg">{objective}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                                {/* Tech Stack */}
+                                                <div className="mt-4">
+                                                    <strong>Tech Stack:</strong> {selectedProject.techStack.join(', ')}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div>
+                                            <ImageCarousel images={selectedProject.images} contain={true} />
+
+                                            {/* Project Title */}
+                                            <h3 className="text-4xl font-bold mt-6 text-center text-gray-900 dark:text-white relative inline-block">
+                                                {selectedProject.title}
+                                                <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"></span>
+                                            </h3>
+
+                                            {/* Project Description */}
+                                            <p className="text-lg text-gray-700 dark:text-gray-400 mt-4 leading-relaxed text-center max-w-3xl mx-auto">{selectedProject.long_desc}</p>
+
+                                            {/* Project Objectives */}
+                                            <div className="mt-6">
+                                                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Objectives</h2>
+                                                <ul className="list-disc list-inside mt-4 space-y-2">
+                                                    {selectedProject.objectives.map((objective, index) => (
+                                                        <li key={index} className="text-gray-700 dark:text-gray-400 text-lg">{objective}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+
+                                            {/* Tech Stack */}
+                                            <div className="mt-6">
+                                                <strong className="text-lg text-gray-900 dark:text-white">Tech Stack:</strong>
+                                                <p className="text-gray-700 dark:text-gray-400 text-lg mt-2">{selectedProject.techStack.join(', ')}</p>
+                                            </div>
+
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
-            </div>
-
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <Player
-                        autoplay
-                        loop
-                        src="https://assets8.lottiefiles.com/packages/lf20_UtkD3sPBCg.json"
-                        style={{ height: '125px', width: '100%' }}
-                    >
-
-                        <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
-
-                    </Player>
-                </a>
-                <div className="pb-5 px-5">
-                    <a href="#">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">TedTalks/ Seminars</h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </div>
-            </div>
-
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <Player
-                        autoplay
-                        loop
-                        src="https://assets3.lottiefiles.com/private_files/lf30_k0wpj0cx.json"
-                        style={{ height: '125px', width: '100%' }}
-                    >
-
-                        <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
-
-                    </Player>
-                </a>
-                <div className="pb-5 px-5">
-                    <a href="#">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Workshops</h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </div>
-            </div>
-
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <Player
-                        autoplay
-                        loop
-                        src="https://assets4.lottiefiles.com/packages/lf20_2glqweqs.json"
-                        style={{ height: '125px', width: '100%' }}
-                    >
-
-                        <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
-
-                    </Player>
-                </a>
-                <div className="pb-5 px-5">
-                    <a href="#">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Certified Courses</h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </div>
-            </div>
+            ))}
 
         </section>
+
     )
 }
 
