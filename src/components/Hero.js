@@ -1,28 +1,29 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
-import { Carousel } from "react-responsive-carousel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-scroll'; // Importing from react-scroll
 
 function Hero() {
-    const navigate = useNavigate();
     return (
-        <div className="bg-sky-50 dark:bg-gray-900 grid md:grid-cols-2 grid-cols-1 w-full mx-auto">
+        <div id='home' className="pt-16 bg-sky-50 dark:bg-gray-900 grid md:grid-cols-2 grid-cols-1 w-full mx-auto h-auto md:h-screen ">
             <div className="md:ml-40 sm:px-4 flex flex-col justify-center items-start p-4 leading-normal w-auto">
-                <h5 className="mb-2 text-5xl mt-5 md:mt-0 md:text-6xl text-start font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Hello, I'm Purab Modi, a Software Engineer & Trainer</h5>
+                <h5 className="mb-2 text-5xl mt-5 md:mt-0 md:text-6xl text-start font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Hello, <br /> I'm Purab Modi, <br /> Software Engineer & Trainer</h5>
                 <p className="mb-3 mt-2 text-start font-normal text-gray-700 dark:text-gray-400">I am a Freelance Software Engineer with 2+ years of experience, helping local businesses and startups bring their visions to life.</p>
                 <div className="flex space-x-4 mt-2">
                     {/* Get In Touch Button */}
-                    <button
-                        onClick={() => navigate("/contact")}
-                        type="button"
-                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex items-center"
+                    <Link
+                    to="contact"
+                    smooth={true} // Enable smooth scroll
+                    duration={500} // Scroll duration
+                    offset={-70}
+                    type="button"
+                        className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex items-center"
                     >
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Get In Touch
-                    </button>
+                    </Link>
 
                     {/* Download Resume Button */}
                     <button
@@ -79,17 +80,35 @@ function Hero() {
 
             </div>
 
-            <div className='flex flex-col justify-start align-middle lg:p-10 md:p-5'>
-                {/* Image Carousel Section */}
-                <Carousel
+            <div className="flex flex-col justify-start items-center lg:p-10 md:p-5 px-4 sm:px-8">
+                <div
+                    className="rounded-full overflow-hidden shadow-lg ring-4 ring-blue-500 dark:ring-gray-700 w-full max-w-[300px] md:max-w-[500px]"
+                    style={{
+                        aspectRatio: "1 / 1", // Maintain a square aspect ratio
+                    }}
+                >
+                    <img
+                        src={require(`../images/hero_image.jpg`)} // Replace with your image path
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
+
+
+
+
+            {/* <div className='flex flex-col justify-start align-middle lg:p-10 md:p-5'> */}
+            {/* Image Carousel Section */}
+            {/* <Carousel
                     autoPlay
                     infiniteLoop
                     showThumbs={false}
                     transitionTime={500}
                     emulateTouch={true}
-                    dynamicHeight={false}>
+                    dynamicHeight={false}> */}
 
-                    <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
+            {/* <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
                         <img src={require(`../images/pm_image_1.jpg`)} alt="Image 1" className="w-full h-full object-cover" />
                     </div>
                     <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
@@ -97,9 +116,9 @@ function Hero() {
                     </div>
                     <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
                         <img src={require(`../images/pm_image_3.jpg`)} alt="Image 3" className="w-full h-full object-cover" />
-                    </div>
-                </Carousel>
-            </div>
+                    </div> */}
+            {/* </Carousel> */}
+            {/* </div> */}
 
 
         </div>
