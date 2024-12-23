@@ -3,7 +3,7 @@ import React from "react";
 const Skill = ({skill}) => {
 
     return (
-        <div className="group relative flex cursor-pointer justify-center items-center">
+        <div className="group relative flex cursor-pointer justify-center items-center hc">
             <div
                 className="rounded-full border border-gray-500 w-20 h-20 xl:w-28 xl:h-28 filter group-hover:grayscale items-center flex justify-center transition duration-300 ease-in-out">
                 <img
