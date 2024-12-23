@@ -32,8 +32,8 @@ const Education = () => {
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
                                 <div className="ml-8 card bg-white shadow-lg rounded-lg p-4">
                                     <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
-                                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                                    <div className="text-left">{item.description}</div>
+                                    <h3 className="font-semibold text-lg  "><span className="text-blue-500">{item.title}</span></h3>
+                                    <div>{item.description}</div>
                                 </div>
                             </div>
                         ))}

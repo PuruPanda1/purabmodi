@@ -1,10 +1,12 @@
+import { computeHeadingLevel } from "@testing-library/react";
 import React from "react";
 
 const Experience = () => {
     const experience1 = [
         {
             year: "Mar '19 - Present",
-            title: "SOFTWARE DEVELOPER & TRAINER | Independent Contractor",
+            title: "Software Developer & Trainer",
+            company: "SELF-EMPLOYED",
             description: (
                 <ul className="list-disc ml-5 text-sm text-gray-600">
                     <li className="mb-2">Conducted a Full Stack Development workshop for 100+ diploma students, covering HTML, CSS, JavaScript, JSP.</li>
@@ -16,7 +18,8 @@ const Experience = () => {
         },
         {
             year: "Mar '24 - Jun '24",
-            title: "DIVE IN 2 DIGITAL | Android Developer Internship",
+            title: "Android Developer Intern",
+            company: "DIVE IN 2 DIGITAL",
             description: (
                 <ul className="list-disc ml-5 text-sm text-gray-600">
                     <li className="mb-2">Contributed to more than 4 android applications.</li>
@@ -30,7 +33,8 @@ const Experience = () => {
     const experience2 = [
         {
             year: "Oct '22 - Dec '22",
-            title: "MENDOFEEL CO. | Android Developer Internship",
+            title: "Android Developer Intern",
+            company: "MENDOFEEL CO.",
             description: (
                 <ul className="list-disc ml-5 text-sm text-gray-600">
                     <li className="mb-2">Migrated 70% of code-base from Java to Kotlin code.</li>
@@ -41,7 +45,8 @@ const Experience = () => {
         },
         {
             year: "Oct '21 - Dec '21",
-            title: "BYJUS | Marketing Intern",
+            title: "Marketing Intern",
+            company: "BYJUS",
             description: (
                 <ul className="list-disc ml-5 text-sm text-gray-600">
                     <li className="mb-2">Learned about generating leads</li>
@@ -51,7 +56,8 @@ const Experience = () => {
         },
         {
             year: "Mar '21 - Aug '21",
-            title: "SIREN ELECTRICALS CAL | Accountant",
+            title: "Accountant",
+            company: "SIREN ELECTRICALS CAL",
             description: (
                 <ul className="list-disc ml-5 text-sm text-gray-600">
                     <li className="mb-2">Prepared and analyzed monthly and annual financial statements</li>
@@ -72,7 +78,7 @@ const Experience = () => {
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
                                 <div className="ml-8 card bg-white shadow-lg rounded-lg p-4">
                                     <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
-                                    <h3 className="font-semibold text-lg">{item.title}</h3>
+                                    <h3 className="font-semibold text-lg  "><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
                                     <div className="text-left">{item.description}</div>
                                 </div>
                             </div>
@@ -87,7 +93,7 @@ const Experience = () => {
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
                                 <div className="ml-8 ard bg-white shadow-lg rounded-lg p-4">
                                     <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
-                                    <h3 className="font-semibold text-lg">{item.title}</h3>
+                                    <h3 className="font-semibold text-lg  "><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
                                     <div className="text-left">{item.description}</div>
                                 </div>
                             </div>

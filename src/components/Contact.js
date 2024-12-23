@@ -49,7 +49,7 @@ function Contact(props) {
 
       <div className="pb-6 px-4 mx-auto max-w-screen-md">
         <p className="mt-4 mb-8 lg:mb-16 font-light text-center font-sans text-gray-500 dark:text-gray-400 sm:text-xl">
-          I have got just what you need. <span className='underline decoration-blue-500'>Lets Talk</span>
+          I have got just what you need. <span className='underline decoration-blue-500 decoration-2'>Lets Talk</span>
         </p>
         <form ref={form} onSubmit={sendEmail} className="space-y-8">
           <div>

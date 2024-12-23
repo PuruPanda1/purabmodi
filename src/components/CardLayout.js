@@ -43,10 +43,22 @@ function CardLayout(props) {
 
                             {/* Tech Stack */}
                             {project.techStack && (
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                                    <strong>Tech Stack:</strong> {project.techStack.join(', ')}
-                                </p>
+                                <div className="mt-2">
+                                    <strong className="text-sm text-gray-700 dark:text-gray-300">Tech Stack:</strong>
+                                    <div className="flex flex-wrap gap-2 mt-1">
+                                        {project.techStack.map((tech, index) => (
+                                            <span
+                                                key={index}
+                                                className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium py-1 px-3 rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
                             )}
+
+
                         </div>
                     </div>
                     {/* Modal Sheet for details */}
@@ -93,7 +105,22 @@ function CardLayout(props) {
                                                 </div>
                                                 {/* Tech Stack */}
                                                 <div className="mt-4">
-                                                    <strong>Tech Stack:</strong> {selectedProject.techStack.join(', ')}
+                                                    {selectedProject.techStack && (
+                                                        <div className="mt-2">
+                                                            <strong className="text-sm text-gray-700 dark:text-gray-300">Tech Stack:</strong>
+                                                            <div className="flex flex-wrap justify-center gap-2 mt-1">
+                                                                {selectedProject.techStack.map((tech, index) => (
+                                                                    <span
+                                                                        key={index}
+                                                                        className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium py-1 px-3 rounded-full"
+                                                                    >
+                                                                        {tech}
+                                                                    </span>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    )}
+
                                                 </div>
                                             </div>
                                         </div>
@@ -122,8 +149,21 @@ function CardLayout(props) {
 
                                             {/* Tech Stack */}
                                             <div className="mt-6">
-                                                <strong className="text-lg text-gray-900 dark:text-white">Tech Stack:</strong>
-                                                <p className="text-gray-700 dark:text-gray-400 text-lg mt-2">{selectedProject.techStack.join(', ')}</p>
+                                                {selectedProject.techStack && (
+                                                    <div className="mt-2">
+                                                        <strong className="text-sm text-gray-700 dark:text-gray-300">Tech Stack:</strong>
+                                                        <div className="flex flex-wrap justify-center gap-2 mt-1">
+                                                            {selectedProject.techStack.map((tech, index) => (
+                                                                <span
+                                                                    key={index}
+                                                                    className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium py-1 px-3 rounded-full"
+                                                                >
+                                                                    {tech}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
 
                                         </div>
