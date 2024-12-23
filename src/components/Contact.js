@@ -39,7 +39,7 @@ function Contact(props) {
   };
 
   return (
-    <div className='h-auto md:h-screen relative'>
+    <div id='contact' className='h-auto md:h-screen relative'>
       <h1
         id='contact'
         className='pt-5 font-sans text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'

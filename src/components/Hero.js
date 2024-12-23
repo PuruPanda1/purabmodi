@@ -80,21 +80,6 @@ function Hero() {
 
             <InteractiveDiv />
 
-            {/* <div className="flex flex-col justify-start items-center lg:p-10 md:p-5 px-4 sm:px-8">
-                <div
-                    className="rounded-full overflow-hidden shadow-lg ring-4 ring-blue-500 dark:ring-gray-700 w-full max-w-[300px] md:max-w-[500px]"
-                    style={{
-                        aspectRatio: "1 / 1", // Maintain a square aspect ratio
-                    }}
-                >
-                    <img
-                        src="/images/hero_image.jpg" // Replace with your image path
-                        alt="Profile"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-            </div> */}
-
 
         </div>
     )

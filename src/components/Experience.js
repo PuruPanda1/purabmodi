@@ -67,8 +67,8 @@ const Experience = () => {
     ];
 
     return (
-        <div className="h-auto md:h-screen">
-            <h1 id='experience' className='font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Experience</h1>
+        <div id='experience' className="h-auto md:h-screen">
+            <h1  className='font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Experience</h1>
 
             <div className="container mx-auto p-8 flex flex-col lg:flex-row gap-8">
                 <div className="section flex-1">

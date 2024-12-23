@@ -7,11 +7,11 @@ import DayNightToggle from './Toggle/DayNightToggle';
 function Navbar() {
 
     const [theme, setTheme] = useState('light');
-    const [activeNavElement, setActiveNavElement] = useState(0);
+    // const [activeNavElement, setActiveNavElement] = useState(0);
 
-    const handleNavItemClick = (n) => {
-        setActiveNavElement(n);
-    };
+    // const handleNavItemClick = (n) => {
+    //     setActiveNavElement(n);
+    // };
 
 
     useEffect(() => {
@@ -35,9 +35,6 @@ function Navbar() {
         { id: 5, name: 'Skills', to: "skills" },
     ];
 
-    const activeNavElementDesign = "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white";
-    const nonActiveNavElementDesign = "block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  transition-all duration-300 ease-in-out transform hover:scale-110 hover:translate-x-1 hover:border-b-2 hover:border-transparent";
-
     return (
         // <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 fixed">
         <nav className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600 fixed">
@@ -48,7 +45,6 @@ function Navbar() {
                         smooth={true} // Enable smooth scroll
                         duration={500} // Scroll duration
                         offset={-70}
-                        onClick={() => handleNavItemClick(0)}
                         className="flex items-center"
                     >
                         <div className="w-10 h-10 rounded-full bg-[#36a6be] flex items-center justify-center mr-2">
@@ -62,7 +58,7 @@ function Navbar() {
                             Purab Modi
                         </span>
                     </Link>
-                    <DayNightToggle toggled={theme} onClick={handleThemeSwitch}/>
+                    <DayNightToggle toggled={theme} onClick={handleThemeSwitch} />
                 </div>
 
                 <div className="flex md:order-2 cursor-pointer">
@@ -71,7 +67,6 @@ function Navbar() {
                         smooth={true}
                         duration={500}
                         offset={-70}
-                        onClick={() => handleNavItemClick(99)}
                         type="button"
                         className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
                     >
@@ -88,11 +83,12 @@ function Navbar() {
                                     to={item.to}
                                     smooth={true} // Enable smooth scroll
                                     duration={500} // Scroll duration
-                                    offset={-70}
-                                    onClick={() => handleNavItemClick(item.id)}
-                                    className={activeNavElement === item.id ? activeNavElementDesign : nonActiveNavElementDesign}
-                                >
+                                    offset={-100}
+                                    spy={true}
+                                    activeClass='text-blue-500 underline decoration-blue-500 decoration-2 transition-all duration-300'
+                                    className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300 ease-in-out transform hover:scale-110 hover:translate-x-1'>
                                     {item.name}
+
                                 </Link>
                             </li>
                         ))}

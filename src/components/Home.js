@@ -8,11 +8,8 @@ import Projects from './Projects';
 import Skills from './Skills';
 function Home() {
     return (
-        <div className='bg-sky-50 dark:bg-gray-900'
-            
-        >
+        <div className='bg-sky-50 dark:bg-gray-900'>
             <Hero />
-
   
             <div className="container mx-auto ">
                 <About />
