@@ -8,7 +8,7 @@ const Experience = () => {
             title: "Software Developer & Trainer",
             company: "SELF-EMPLOYED",
             description: (
-                <ul className="list-disc ml-5 text-sm text-gray-600">
+                <ul className="list-disc ml-5 text-sm ">
                     <li className="mb-2">Conducted a Full Stack Development workshop for 100+ diploma students, covering HTML, CSS, JavaScript, JSP.</li>
                     <li className="mb-2">Designed and launched over 10 custom websites and mobile applications for small businesses.</li>
                     <li className="mb-2">Developed projects for Final-year Indian Students and International Students.</li>
@@ -21,7 +21,7 @@ const Experience = () => {
             title: "Android Developer Intern",
             company: "DIVE IN 2 DIGITAL",
             description: (
-                <ul className="list-disc ml-5 text-sm text-gray-600">
+                <ul className="list-disc ml-5 text-sm ">
                     <li className="mb-2">Contributed to more than 4 android applications.</li>
                     <li className="mb-2">Increased client retention by 35% by optimizing API calls.</li>
                     <li className="mb-2">Integrated payment gateways for secure and seamless transactions.</li>
@@ -36,7 +36,7 @@ const Experience = () => {
             title: "Android Developer Intern",
             company: "MENDOFEEL CO.",
             description: (
-                <ul className="list-disc ml-5 text-sm text-gray-600">
+                <ul className="list-disc ml-5 text-sm ">
                     <li className="mb-2">Migrated 70% of code-base from Java to Kotlin code.</li>
                     <li className="mb-2">Developed Reels-like news feature to increase user time by 50%.</li>
                     <li className="mb-2">Implemented MVVM Architecture with Repository pattern for better performance.</li>
@@ -48,7 +48,7 @@ const Experience = () => {
             title: "Marketing Intern",
             company: "BYJUS",
             description: (
-                <ul className="list-disc ml-5 text-sm text-gray-600">
+                <ul className="list-disc ml-5 text-sm ">
                     <li className="mb-2">Learned about generating leads</li>
                     <li className="mb-2">Generated more than 100+ leads during my internship.</li>
                 </ul>
@@ -59,7 +59,7 @@ const Experience = () => {
             title: "Accountant",
             company: "SIREN ELECTRICALS CAL",
             description: (
-                <ul className="list-disc ml-5 text-sm text-gray-600">
+                <ul className="list-disc ml-5 text-sm ">
                     <li className="mb-2">Prepared and analyzed monthly and annual financial statements</li>
                 </ul>
             )
@@ -76,10 +76,10 @@ const Experience = () => {
                         {experience1.map((item, index) => (
                             <div className="timeline-item mb-6 relative" key={index}>
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
-                                <div className="ml-8 card bg-white shadow-lg rounded-lg p-4">
+                                <div className="ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
                                     <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
-                                    <h3 className="font-semibold text-lg  "><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
-                                    <div className="text-left">{item.description}</div>
+                                    <h3 className="font-semibold text-lg text-black dark:text-white"><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
+                                    <div className="text-left text-black dark:text-gray-300">{item.description}</div>
                                 </div>
                             </div>
                         ))}
@@ -91,10 +91,10 @@ const Experience = () => {
                         {experience2.map((item, index) => (
                             <div className="timeline-item mb-6 relative" key={index}>
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
-                                <div className="ml-8 ard bg-white shadow-lg rounded-lg p-4">
+                                <div className="ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
                                     <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
-                                    <h3 className="font-semibold text-lg  "><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
-                                    <div className="text-left">{item.description}</div>
+                                    <h3 className="font-semibold text-lg text-black dark:text-white"><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
+                                    <div className="text-left text-black dark:text-gray-300">{item.description}</div>
                                 </div>
                             </div>
                         ))}
