@@ -10,7 +10,7 @@ function About(props) {
     ]
   return (
     <div className='h-auto md:h-screen'>
-      <h1 id='about' className=' font-sans pt-10 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>About</h1>
+      <h1 id='about' className=' font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>About</h1>
       <div
         className='pt-6 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
       >

@@ -96,31 +96,6 @@ function Hero() {
             </div>
 
 
-
-
-            {/* <div className='flex flex-col justify-start align-middle lg:p-10 md:p-5'> */}
-            {/* Image Carousel Section */}
-            {/* <Carousel
-                    autoPlay
-                    infiniteLoop
-                    showThumbs={false}
-                    transitionTime={500}
-                    emulateTouch={true}
-                    dynamicHeight={false}> */}
-
-            {/* <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
-                        <img src={require(`../images/pm_image_1.jpg`)} alt="Image 1" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
-                        <img src={require(`../images/pm_image_2.jpg`)} alt="Image 2" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="carousel-image-container rounded-lg overflow-hidden shadow-lg">
-                        <img src={require(`../images/pm_image_3.jpg`)} alt="Image 3" className="w-full h-full object-cover" />
-                    </div> */}
-            {/* </Carousel> */}
-            {/* </div> */}
-
-
         </div>
     )
 }

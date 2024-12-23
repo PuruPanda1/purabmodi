@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'; // Importing from react-scroll
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
-
 
 function Navbar() {
-    const navigate = useNavigate();
 
     const [theme, setTheme] = useState('light');
     const [activeNavElement, setActiveNavElement] = useState(0);

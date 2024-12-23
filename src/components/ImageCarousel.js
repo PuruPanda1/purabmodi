@@ -19,6 +19,7 @@ const ImageCarousel = ({ images, contain = false }) => {
                     ${contain ? 'object-contain' : 'object-cover'} 
                     md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px] md:aspect-[9/16]`}
                     src={image}
+                    alt='carousel'
                 />
             ))}
 

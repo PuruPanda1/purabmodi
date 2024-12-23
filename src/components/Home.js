@@ -4,7 +4,6 @@ import Contact from './Contact';
 import About from './About';
 import Experience from './Experience';
 import Education from './Education';
-import CardLayout from './CardLayout';
 import Projects from './Projects';
 import Skills from './Skills';
 function Home() {

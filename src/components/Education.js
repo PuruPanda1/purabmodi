@@ -22,7 +22,7 @@ const Education = () => {
 
     return (
         <div className="h-auto md:h-screen">
-            <h1 id='education' className='font-sans pt-10 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Education</h1>
+            <h1 id='education' className='font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Education</h1>
 
             <div className="container lg:w-1/2 mx-auto p-8 flex flex-col lg:flex-row gap-8">
                 <div className="section flex-1">
