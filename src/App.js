@@ -7,9 +7,6 @@ import { useEffect } from 'react';
 function App() {
   useEffect(() => {
     const hiddenElements = document.querySelectorAll('.hc');
-    console.log(hiddenElements);
-  
-    // Observer options: increase threshold for more scrolling
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         // Trigger the animation when 50% of the element is in view
