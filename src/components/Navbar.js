@@ -7,12 +7,6 @@ import DayNightToggle from './Toggle/DayNightToggle';
 function Navbar() {
 
     const [theme, setTheme] = useState('light');
-    // const [activeNavElement, setActiveNavElement] = useState(0);
-
-    // const handleNavItemClick = (n) => {
-    //     setActiveNavElement(n);
-    // };
-
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -39,7 +33,7 @@ function Navbar() {
         // <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 fixed">
         <nav className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600 fixed">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
-                <div className="left flex justify-center cursor-pointer">
+                <div className="logo left flex justify-center cursor-pointer">
                     <Link
                         to="home"
                         smooth={true} // Enable smooth scroll
@@ -62,18 +56,18 @@ function Navbar() {
                 </div>
 
                 <div className="flex md:order-2 cursor-pointer">
-    <Link
-        to="contact"
-        smooth={true}
-        duration={500}
-        offset={-70}
-        type="button"
-        className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
-    >
-        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-        <span className="hidden md:block">Get In Touch</span>
-    </Link>
-</div>
+                    <Link
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        offset={-70}
+                        type="button"
+                        className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
+                    >
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        <span className="hidden md:block">Get In Touch</span>
+                    </Link>
+                </div>
 
 
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">

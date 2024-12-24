@@ -9,7 +9,7 @@ const HeroText = () => {
         I'm Purab Modi, <br />
         <span className="text-blue-500 dark:text-blue-300">
           <Typewriter
-            words={['Software Engineer', 'Trainer', 'Tech Enthusiast']}
+            words={['S/W Engineer', 'Trainer', 'Tech Enthusiast']}
             loop={true} // Enable looping
             cursor
             cursorStyle="_"

@@ -8,6 +8,7 @@
   pointer-events: none;
 }
 
+/* animation */
 .hc {
   opacity: 0;
   filter: blur(5px);
@@ -28,6 +29,23 @@
     transition: none;
   }
 }
+
+.slick-dots li.slick-active button:before {
+  color:#3B82F6 !important;
+}
+
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* You can do the same for links */
+.logo {
+-webkit-tap-highlight-color: transparent;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* Style for the scrollbar container */
 ::-webkit-scrollbar {
   width: 2px; /* Adjust the width of the scrollbar */
