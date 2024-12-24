@@ -22,7 +22,7 @@ export const projects = [
         title: 'QuickHire',
         description: 'A mobile application which connects job seekers and job providers.',
         animation: 'https://assets8.lottiefiles.com/packages/lf20_UtkD3sPBCg.json',
-        techStack: ["Flutter", "OAuth", "APIs", "Django", "Python", "RazorPay", "Gunicorn", "Nginx"],
+        techStack: ["Flutter", "OAuth", "Django", "Python", "RazorPay"],
         images: [
             'images/projects/quick_hire/0.jpg',
             'images/projects/quick_hire/1.jpg',
