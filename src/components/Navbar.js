@@ -62,18 +62,19 @@ function Navbar() {
                 </div>
 
                 <div className="flex md:order-2 cursor-pointer">
-                    <Link
-                        to="contact"
-                        smooth={true}
-                        duration={500}
-                        offset={-70}
-                        type="button"
-                        className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-                        Get In Touch
-                    </Link>
-                </div>
+    <Link
+        to="contact"
+        smooth={true}
+        duration={500}
+        offset={-70}
+        type="button"
+        className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
+    >
+        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+        <span className="hidden md:block">Get In Touch</span>
+    </Link>
+</div>
+
 
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  dark:border-gray-700">
