@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
 import Home from './components/Home';
 import { useEffect } from 'react';
+import Lenis from 'lenis'
+import 'lenis/dist/lenis.css'
 
 function App() {
   useEffect(() => {
@@ -18,11 +20,11 @@ function App() {
       });
     }, {
     });
-  
+
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });
-  
+
     // Cleanup observer on component unmount
     return () => {
       hiddenElements.forEach((element) => {
@@ -30,7 +32,20 @@ function App() {
       });
     };
   }, []);
-  
+
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis();
+
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
 
   return (
     <div className="App dark:bg-gray-900">
