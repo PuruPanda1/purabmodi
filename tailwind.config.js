@@ -11,6 +11,7 @@ module.exports = {
       }
     },
     fontFamily: {
+      spaceGrotesk: ['"Space Grotesk"', 'sans-serif'],
       'body': [
     'Montserrat', 
     'ui-sans-serif', 

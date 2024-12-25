@@ -48,7 +48,7 @@ function Navbar() {
                                 className="w-full h-full object-cover rounded-full"
                             />
                         </div>
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                        <span className="font-spaceGrotesk self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                             Purab Modi
                         </span>
                     </Link>
