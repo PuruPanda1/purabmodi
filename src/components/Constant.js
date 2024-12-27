@@ -248,6 +248,24 @@ export const experience2 = [
     },
 ];
 
+export const education = [
+    {
+        year: "2022 - 2025",
+        title: "Bachelor's Degree in Computer Science & Engineering",
+        description: "Sambhram Institute of Technology, Bangalore, India"
+    },
+    {
+        year: "2019 - 2022",
+        title: "Diploma in Information Technology",
+        description: "Parul Polytechnic Institute, Vadodara, India"
+    },
+    {
+        year: "2019",
+        title: "Class 10th (WBSE)",
+        description: "The Calcutta Anglo Gujarati School, Kolkata, India"
+    }
+];
+
 // Utility to check if the screen is mobile
 const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
 

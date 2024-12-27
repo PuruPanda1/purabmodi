@@ -1,26 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { upAnimation } from "./Constant";
+import { upAnimation, education } from "./Constant";
 
 const Education = () => {
-    const education = [
-        {
-            year: "2022 - 2025",
-            title: "Bachelor's Degree in Computer Science & Engineering",
-            description: "Sambhram Institute of Technology, Bangalore, India"
-        },
-        {
-            year: "2019 - 2022",
-            title: "Diploma in Information Technology",
-            description: "Parul Polytechnic Institute, Vadodara, India"
-        },
-        {
-            year: "2019",
-            title: "Class 10th (WBSE)",
-            description: "The Calcutta Anglo Gujarati School, Kolkata, India"
-        }
-    ];
-
 
     return (
         <div id='education' className="h-auto md:h-screen">
