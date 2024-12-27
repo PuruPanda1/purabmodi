@@ -183,3 +183,167 @@ export const skills = [
 export const SERVICE_ID = 'service_2v2s3gi';
 export const TEMPLATE_ID = 'template_49hl226';
 export const PUBLIC_KEY = 'rhCP0wS0Nvge4HZg4';
+
+export const experience1 = [
+    {
+        year: "Mar '19 - Present",
+        title: "Software Developer & Trainer",
+        company: "SELF-EMPLOYED",
+        description: (
+            <ul className="list-disc ml-5 text-sm ">
+                <li className="mb-2">Conducted a Full Stack Development workshop for 100+ diploma students, covering HTML, CSS, JavaScript, JSP.</li>
+                <li className="mb-2">Designed and launched over 10 custom websites and mobile applications for small businesses.</li>
+                <li className="mb-2">Developed projects for Final-year Indian Students and International Students.</li>
+                <li className="mb-2">Managed end-to-end project life-cycles, ensuring timely delivery within budget.</li>
+            </ul>
+        )
+    },
+    {
+        year: "Mar '24 - Jun '24",
+        title: "Android Developer Intern",
+        company: "DIVE IN 2 DIGITAL",
+        description: (
+            <ul className="list-disc ml-5 text-sm ">
+                <li className="mb-2">Contributed to more than 4 android applications.</li>
+                <li className="mb-2">Increased client retention by 35% by optimizing API calls.</li>
+                <li className="mb-2">Integrated payment gateways for secure and seamless transactions.</li>
+            </ul>
+        )
+    },
+
+];
+export const experience2 = [
+    {
+        year: "Oct '22 - Dec '22",
+        title: "Android Developer Intern",
+        company: "MENDOFEEL CO.",
+        description: (
+            <ul className="list-disc ml-5 text-sm ">
+                <li className="mb-2">Migrated 70% of code-base from Java to Kotlin code.</li>
+                <li className="mb-2">Developed Reels-like news feature to increase user time by 50%.</li>
+                <li className="mb-2">Implemented MVVM Architecture with Repository pattern for better performance.</li>
+            </ul>
+        )
+    },
+    {
+        year: "Oct '21 - Dec '21",
+        title: "Marketing Intern",
+        company: "BYJUS",
+        description: (
+            <ul className="list-disc ml-5 text-sm ">
+                <li className="mb-2">Learned about generating leads</li>
+                <li className="mb-2">Generated more than 100+ leads during my internship.</li>
+            </ul>
+        )
+    },
+    {
+        year: "Mar '21 - Aug '21",
+        title: "Accountant",
+        company: "SIREN ELECTRICALS CAL",
+        description: (
+            <ul className="list-disc ml-5 text-sm ">
+                <li className="mb-2">Prepared and analyzed monthly and annual financial statements</li>
+            </ul>
+        )
+    },
+];
+
+// Utility to check if the screen is mobile
+const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
+
+// Common animation configurations based on direction
+const leftAnimation = {
+  variants: isMobile
+    ? {} // Disable animations for mobile
+    : {
+        hidden: {
+          x: '100%',
+          opacity: 0,
+        },
+        show: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            type: 'tween',
+            duration: 1.2,
+            delay: 0.2, // Adjust as needed
+            ease: [0.25, 0.25, 0.25, 0.75],
+          },
+        },
+      },
+  initial: isMobile ? false : 'hidden', // Disable initial state on mobile
+  whileInView: isMobile ? false : 'show', // Disable whileInView on mobile
+  viewport: isMobile ? {} : { once: false, amount: 0.1 }, // Disable viewport settings on mobile
+};
+
+const rightAnimation = {
+  variants: isMobile
+    ? {}
+    : {
+        hidden: {
+          x: '-100%',
+          opacity: 0,
+        },
+        show: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            type: 'tween',
+            duration: 1.2,
+            delay: 0.2, // Adjust as needed
+            ease: [0.25, 0.25, 0.25, 0.75],
+          },
+        },
+      },
+  initial: isMobile ? false : 'hidden',
+  whileInView: isMobile ? false : 'show',
+  viewport: isMobile ? {} : { once: false, amount: 0.1 },
+};
+
+const upAnimation = {
+  variants: isMobile
+    ? {}
+    : {
+        hidden: {
+          opacity: 0,
+          y: 20,
+        },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.3,
+            delay: 0.2, // Adjust as needed
+            ease: 'easeOut',
+          },
+        },
+      },
+  initial: isMobile ? false : 'hidden',
+  whileInView: isMobile ? false : 'show',
+  viewport: isMobile ? {} : { once: true, amount: 0.1 },
+};
+
+const downAnimation = {
+  variants: isMobile
+    ? {}
+    : {
+        hidden: {
+          opacity: 0,
+          y: -20,
+        },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.3,
+            delay: 0.2, // Adjust as needed
+            ease: 'easeOut',
+          },
+        },
+      },
+  initial: isMobile ? false : 'hidden',
+  whileInView: isMobile ? false : 'show',
+  viewport: isMobile ? {} : { once: true, amount: 0.1 },
+};
+
+export { leftAnimation, rightAnimation, upAnimation, downAnimation };

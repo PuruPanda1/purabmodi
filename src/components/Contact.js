@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+import { upAnimation } from './Constant';
 
 function Contact(props) {
   const form = useRef();
@@ -40,12 +42,11 @@ function Contact(props) {
 
   return (
     <div id='contact' className='h-auto md:h-screen relative'>
-      <h1
-        id='contact'
-        className='pt-5 font-sans text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'
-      >
+      <motion.h1
+        {...upAnimation}
+        className=' font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>
         Contact
-      </h1>
+      </motion.h1>
 
       <div className="pb-6 px-4 mx-auto max-w-screen-md">
         <p className="mt-4 mb-8 lg:mb-16 font-light text-center font-sans text-gray-500 dark:text-gray-400 sm:text-xl">
@@ -111,9 +112,8 @@ function Contact(props) {
       {/* Popup Notification */}
       {showPopup && (
         <div
-          className={`fixed bottom-10 right-10 px-4 py-3 rounded-md shadow-md ${
-            popupSuccess ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
-          }`}
+          className={`fixed bottom-10 right-10 px-4 py-3 rounded-md shadow-md ${popupSuccess ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+            }`}
         >
           {popupMessage}
         </div>

@@ -33,13 +33,13 @@ function Navbar() {
         // <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 fixed">
         <nav className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600 fixed">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
-                <div className="logo left flex justify-center cursor-pointer">
+                <div className="logo-container flex items-center justify-between">
                     <Link
                         to="home"
                         smooth={true} // Enable smooth scroll
                         duration={500} // Scroll duration
                         offset={-70}
-                        className="flex items-center"
+                        className="flex items-center cursor-pointer"
                     >
                         <div className="w-10 h-10 rounded-full bg-[#36a6be] flex items-center justify-center mr-2">
                             <img
@@ -52,8 +52,11 @@ function Navbar() {
                             Purab Modi
                         </span>
                     </Link>
-                    <DayNightToggle toggled={theme} onClick={handleThemeSwitch} />
+                    <div className="ml-1"> {/* Added margin for spacing */}
+                        <DayNightToggle toggled={theme} onClick={handleThemeSwitch} />
+                    </div>
                 </div>
+
 
                 <div className="flex md:order-2 cursor-pointer">
                     <Link

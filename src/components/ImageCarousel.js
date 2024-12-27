@@ -3,10 +3,15 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
+import { rightAnimation } from './Constant';
 
 const ImageCarousel = ({ images, contain = false }) => {
-    return (
-        <Carousel
+  return (
+    <motion.div
+      {...rightAnimation}
+    >
+      <Carousel
         autoPlay
         infiniteLoop
         showThumbs={false}
@@ -46,8 +51,9 @@ const ImageCarousel = ({ images, contain = false }) => {
           />
         ))}
       </Carousel>
-      
-    );
+    </motion.div>
+
+  );
 };
 
 export default ImageCarousel;

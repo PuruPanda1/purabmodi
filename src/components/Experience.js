@@ -1,74 +1,16 @@
-import { computeHeadingLevel } from "@testing-library/react";
 import React from "react";
-
+import { motion } from "framer-motion";
+import { upAnimation,experience1,experience2 } from "./Constant";
 const Experience = () => {
-    const experience1 = [
-        {
-            year: "Mar '19 - Present",
-            title: "Software Developer & Trainer",
-            company: "SELF-EMPLOYED",
-            description: (
-                <ul className="list-disc ml-5 text-sm ">
-                    <li className="mb-2">Conducted a Full Stack Development workshop for 100+ diploma students, covering HTML, CSS, JavaScript, JSP.</li>
-                    <li className="mb-2">Designed and launched over 10 custom websites and mobile applications for small businesses.</li>
-                    <li className="mb-2">Developed projects for Final-year Indian Students and International Students.</li>
-                    <li className="mb-2">Managed end-to-end project life-cycles, ensuring timely delivery within budget.</li>
-                </ul>
-            )
-        },
-        {
-            year: "Mar '24 - Jun '24",
-            title: "Android Developer Intern",
-            company: "DIVE IN 2 DIGITAL",
-            description: (
-                <ul className="list-disc ml-5 text-sm ">
-                    <li className="mb-2">Contributed to more than 4 android applications.</li>
-                    <li className="mb-2">Increased client retention by 35% by optimizing API calls.</li>
-                    <li className="mb-2">Integrated payment gateways for secure and seamless transactions.</li>
-                </ul>
-            )
-        },
-
-    ];
-    const experience2 = [
-        {
-            year: "Oct '22 - Dec '22",
-            title: "Android Developer Intern",
-            company: "MENDOFEEL CO.",
-            description: (
-                <ul className="list-disc ml-5 text-sm ">
-                    <li className="mb-2">Migrated 70% of code-base from Java to Kotlin code.</li>
-                    <li className="mb-2">Developed Reels-like news feature to increase user time by 50%.</li>
-                    <li className="mb-2">Implemented MVVM Architecture with Repository pattern for better performance.</li>
-                </ul>
-            )
-        },
-        {
-            year: "Oct '21 - Dec '21",
-            title: "Marketing Intern",
-            company: "BYJUS",
-            description: (
-                <ul className="list-disc ml-5 text-sm ">
-                    <li className="mb-2">Learned about generating leads</li>
-                    <li className="mb-2">Generated more than 100+ leads during my internship.</li>
-                </ul>
-            )
-        },
-        {
-            year: "Mar '21 - Aug '21",
-            title: "Accountant",
-            company: "SIREN ELECTRICALS CAL",
-            description: (
-                <ul className="list-disc ml-5 text-sm ">
-                    <li className="mb-2">Prepared and analyzed monthly and annual financial statements</li>
-                </ul>
-            )
-        },
-    ];
+    
 
     return (
         <div id='experience' className="h-auto md:h-screen">
-            <h1  className='font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Experience</h1>
+            <motion.h1
+                {...upAnimation}
+                className=' font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>
+                Experience
+            </motion.h1>
 
             <div className="container mx-auto p-8 flex flex-col lg:flex-row gap-8">
                 <div className="section flex-1">

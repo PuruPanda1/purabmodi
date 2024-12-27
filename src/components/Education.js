@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { upAnimation } from "./Constant";
 
 const Education = () => {
     const education = [
@@ -22,7 +24,11 @@ const Education = () => {
 
     return (
         <div id='education' className="h-auto md:h-screen">
-            <h1  className='font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>Education</h1>
+            <motion.h1
+                {...upAnimation}
+                className=' font-sans pt-5 text-5xl from-stone-800 dark:text-white uppercase tracking-[20px] text-xl'>
+                Education
+            </motion.h1>
 
             <div className="container lg:w-1/2 mx-auto p-8 flex flex-col lg:flex-row gap-8">
                 <div className="section flex-1">
