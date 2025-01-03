@@ -20,7 +20,7 @@ const InteractiveDiv = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center lg:p-10 md:p-5 px-4 sm:px-8">
+    <div className="flex flex-col justify-center items-center lg:p-10 md:p-5 px-4 sm:px-8">
       <div
         ref={divRef}
         className="rounded-full overflow-hidden shadow-lg ring-4 ring-blue-500 dark:ring-gray-700 w-full max-w-[300px] md:max-w-[500px] transition-transform duration-200 ease-out"
