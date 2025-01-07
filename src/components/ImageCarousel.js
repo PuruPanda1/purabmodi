@@ -6,10 +6,10 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { motion } from 'framer-motion';
 import { rightAnimation } from './Constant';
 
-const ImageCarousel = ({ images, contain = false }) => {
+const ImageCarousel = ({ images, contain = false, isAnimated = false }) => {
   return (
     <motion.div
-      {...rightAnimation}
+      {...(isAnimated ? rightAnimation : {})}
     >
       <Carousel
         autoPlay
@@ -52,7 +52,6 @@ const ImageCarousel = ({ images, contain = false }) => {
         ))}
       </Carousel>
     </motion.div>
-
   );
 };
 

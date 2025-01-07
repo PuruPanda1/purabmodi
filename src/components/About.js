@@ -22,7 +22,7 @@ function About(props) {
         className='pt-6 flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
       >
 
-        <ImageCarousel images={images} />
+        <ImageCarousel images={images} isAnimated={true} />
 
 
         <motion.div
