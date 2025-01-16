@@ -13,7 +13,7 @@ export const projects = [
         ],
         long_desc: ``,
         objectives: [
-            'Learn: Understand how messaging technology works using WebSockets for real-time communication.',
+            'Learn: Understood how messaging technology works using WebSockets for real-time communication.',
             'Build: Create a functional chat application using Django, Channels, and Redis as the backend.',
             'Explore: Gain hands-on experience with real-time data handling and integration of WebSockets into web applications.'
         ],
@@ -206,7 +206,7 @@ export const PUBLIC_KEY = 'rhCP0wS0Nvge4HZg4';
 
 export const experience1 = [
     {
-        year: "Mar '19 - Present",
+        year: "Jul '24 - Present",
         title: "Software Developer & Trainer",
         company: "SELF-EMPLOYED",
         description: (

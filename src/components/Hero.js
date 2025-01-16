@@ -29,7 +29,7 @@ function Hero() {
 
                     {/* Download Resume Button */}
                     <a
-                        href="https://drive.google.com/file/d/1WtzsvLBRqVLG1RnCB_RRSltEieYqApYN/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1qZI796YZc_avCoKtOOE9gpskb5UtfTq9/view?usp=sharing"
                         download="My_Resume"
                         target="_blank"
                         rel="noreferrer"
