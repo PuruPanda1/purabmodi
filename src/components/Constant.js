@@ -1,5 +1,25 @@
 export const projects = [
     {
+        title: 'Simple Chat',
+        description: 'A real time chat application developed using django & websockets.',
+        animation: 'https://lottie.host/2bcf38f4-d709-4b39-a1a8-ba1247d9d992/kmln7WqWZk.lottie',
+        techStack: ["Python", "Django", "WebSockets", "Channels", "Redis"],
+        images: [
+            'images/projects/simple_chat/0.png',
+            'images/projects/simple_chat/1.png',
+            'images/projects/simple_chat/2.png',
+            'images/projects/simple_chat/3.png',
+            'images/projects/simple_chat/4.png',
+        ],
+        long_desc: ``,
+        objectives: [
+            'Learn: Understand how messaging technology works using WebSockets for real-time communication.',
+            'Build: Create a functional chat application using Django, Channels, and Redis as the backend.',
+            'Explore: Gain hands-on experience with real-time data handling and integration of WebSockets into web applications.'
+        ],
+        orientation: 'landscape'
+    },
+    {
         title: 'Routing Algorithm',
         description: 'An Novel Ship Routing Algorithm that finds the shortest path for ships',
         animation: 'https://lottie.host/83e97d78-9870-4c78-806e-25314323d526/otCHvoqQ36.lottie',
