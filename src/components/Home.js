@@ -6,15 +6,15 @@ import Experience from './Experience';
 import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
-function Home() {
+function Home({data}) {
     return (
         <div className='bg-sky-50 dark:bg-gray-900'>
-            <Hero />
+            <Hero heroData={data.hero} />
   
             <div className="container mx-auto ">
-                <About />
-                <Education />
-                <Experience />
+                <About aboutText={data.hero.about_me}/>
+                <Education educationData={data.education} />
+                <Experience experienceData={data.experience}/>
                 <Projects/>
                 <Skills/>
                 <Contact />

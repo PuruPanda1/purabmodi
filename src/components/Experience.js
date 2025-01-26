@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { upAnimation,experience1,experience2 } from "./Constant";
-const Experience = () => {
-    
+import { upAnimation, leftAnimation } from "./Constant";
+const Experience = ({ experienceData }) => {
+
+    const len = experienceData.length;
+    const experience1 = experienceData.slice(0, len / 2)
+    const experience2 = experienceData.slice(len / 2, len)
 
     return (
         <div id='experience' className="h-auto md:h-screen">
@@ -18,11 +21,19 @@ const Experience = () => {
                         {experience1.map((item, index) => (
                             <div className="timeline-item mb-6 relative" key={index}>
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
-                                <div className="hc ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
-                                    <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
+                                <motion.div
+                                    {...leftAnimation}
+                                    className="ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
+                                    <span className="year text-sm text-gray-500 block mb-2">{item.duration}</span>
                                     <h3 className="font-semibold text-lg text-black dark:text-white"><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
-                                    <div className="text-left text-black dark:text-gray-300">{item.description}</div>
-                                </div>
+                                    <div className="text-left text-black dark:text-gray-300">
+                                        <ul className="list-disc ml-5 text-sm ">
+                                            {item.description.map((desc, index) => (
+                                                <li className="mb-2" key={index}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </motion.div>
                             </div>
                         ))}
                     </div>
@@ -33,11 +44,19 @@ const Experience = () => {
                         {experience2.map((item, index) => (
                             <div className="timeline-item mb-6 relative" key={index}>
                                 <div className="dot w-4 h-4 bg-blue-500 rounded-full border-2 border-white absolute -left-2.5 top-1"></div>
-                                <div className="hc ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
-                                    <span className="year text-sm text-gray-500 block mb-2">{item.year}</span>
+                                <motion.div
+                                    {...leftAnimation}
+                                    className=" ml-8 card bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800 dark:border-gray-700">
+                                    <span className="year text-sm text-gray-500 block mb-2">{item.duration}</span>
                                     <h3 className="font-semibold text-lg text-black dark:text-white"><span className="text-blue-500">{item.title}</span> | {item.company}</h3>
-                                    <div className="text-left text-black dark:text-gray-300">{item.description}</div>
-                                </div>
+                                    <div className="text-left text-black dark:text-gray-300">
+                                        <ul className="list-disc ml-5 text-sm ">
+                                            {item.description.map((desc, index) => (
+                                                <li className="mb-2" key={index}>{desc}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </motion.div>
                             </div>
                         ))}
                     </div>

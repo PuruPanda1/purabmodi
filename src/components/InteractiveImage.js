@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const InteractiveDiv = () => {
+const InteractiveDiv = ({imageLink}) => {
   const divRef = useRef(null);
 
   const handleMouseMove = (e) => {

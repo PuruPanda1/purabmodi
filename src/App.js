@@ -2,36 +2,37 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
 import Home from './components/Home';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 
 function App() {
-  useEffect(() => {
-    const hiddenElements = document.querySelectorAll('.hc');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // Trigger the animation when 50% of the element is in view
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    }, {
-    });
+  // useEffect(() => {
+  //   const hiddenElements = document.querySelectorAll('.hc');
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       // Trigger the animation when 50% of the element is in view
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('show');
+  //       } else {
+  //         entry.target.classList.remove('show');
+  //       }
+  //     });
+  //   }, {
+  //   });
 
-    hiddenElements.forEach((element) => {
-      observer.observe(element);
-    });
+  //   hiddenElements.forEach((element) => {
+  //     observer.observe(element);
+  //   });
 
-    // Cleanup observer on component unmount
-    return () => {
-      hiddenElements.forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
-  }, []);
+  //   // Cleanup observer on component unmount
+  //   return () => {
+  //     hiddenElements.forEach((element) => {
+  //       observer.unobserve(element);
+  //     });
+  //   };
+  // }, []);
 
   useEffect(() => {
     // Initialize Lenis
@@ -46,12 +47,28 @@ function App() {
     requestAnimationFrame(raf);
   });
 
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get("http://127.0.0.1:8000/api/portfolio/")
+      .then((response) => {
+        setData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <div className="App dark:bg-gray-900">
       <div>
         <Navbar />
-        <Home /> {/* Directly rendering the Home component */}
+        <Home data={data} />
       </div>
       <Footer />
     </div >
