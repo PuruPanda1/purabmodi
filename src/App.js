@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
+import PreLoader from './components/PreLoader';
 
 function App() {
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/portfolio/")
+    axios.get("https://purabmodi.pythonanywhere.com/api/portfolio/")
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -36,7 +37,7 @@ function App() {
       });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <PreLoader/>;
 
   return (
     <div className="App dark:bg-gray-900">
