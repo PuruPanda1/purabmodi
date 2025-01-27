@@ -15,8 +15,8 @@ function Home({ data }) {
                 <About aboutText={data.hero.about_me} />
                 <Education educationData={data.education} />
                 <Experience experienceData={data.experience} />
-                <Projects />
-                <Skills />
+                <Projects projectData={data.project}/>
+                <Skills skillData={data.skill}/>
                 <Contact />
             </div>
         </div>

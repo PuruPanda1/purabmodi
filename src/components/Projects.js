@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { upAnimation } from "./Constant";
 
-const Projects = () => {
+const Projects = ({projectData}) => {
 
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
@@ -30,7 +30,7 @@ const Projects = () => {
                 Projects
             </motion.h1>
             <p className="font-light text-center font-sans text-gray-500 dark:text-gray-400 sm:text-xl">Click on Project for <span className='underline decoration-blue-500 decoration-4'>more details</span></p>
-            <CardLayout isLargeScreen={isLargeScreen} />
+            <CardLayout isLargeScreen={isLargeScreen} projectData={projectData} />
         </div>
 
     );

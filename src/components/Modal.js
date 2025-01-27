@@ -22,17 +22,13 @@ const Modal = ({ selectedProject, closeModal }) => {
                         ? (
                             <div className="flex flex-row gap-8">
                                 <div className="w-1/2">
-                                    <ImageCarousel images={selectedProject.images} contain={true} />
+                                    <ImageCarousel images={selectedProject.photos} contain={true} />
                                 </div>
                                 <div className="w-1/2">
                                     <h3 className="text-4xl font-bold mt-6 text-center text-gray-900 dark:text-white relative inline-block">
                                         {selectedProject.title}
                                         <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"></span>
                                     </h3>
-
-                                    <p className="text-lg text-gray-700 dark:text-gray-400 mt-4 leading-relaxed text-center max-w-3xl mx-auto">
-                                        {selectedProject.long_desc}
-                                    </p>
 
                                     <div className="mt-6">
                                         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Objectives</h2>
@@ -45,11 +41,11 @@ const Modal = ({ selectedProject, closeModal }) => {
                                         </ul>
                                     </div>
                                     <div className="mt-4">
-                                        {selectedProject.techStack && (
+                                        {selectedProject.tech_stack && (
                                             <div className="mt-2">
                                                 <strong className="text-sm text-gray-700 dark:text-gray-300">Tech Stack:</strong>
                                                 <div className="flex flex-wrap justify-center gap-2 mt-1">
-                                                    {selectedProject.techStack.map((tech, index) => (
+                                                    {selectedProject.tech_stack.map((tech, index) => (
                                                         <span
                                                             key={index}
                                                             className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium py-1 px-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600"
@@ -65,7 +61,7 @@ const Modal = ({ selectedProject, closeModal }) => {
                             </div>
                         ) : (
                             <div>
-                                <ImageCarousel images={selectedProject.images} contain={true} />
+                                <ImageCarousel images={selectedProject.photos} contain={true} />
 
                                 <h3 className="text-4xl font-bold mt-6 text-center text-gray-900 dark:text-white relative inline-block">
                                     {selectedProject.title}
@@ -88,11 +84,11 @@ const Modal = ({ selectedProject, closeModal }) => {
                                 </div>
 
                                 <div className="mt-6">
-                                    {selectedProject.techStack && (
+                                    {selectedProject.tech_stack && (
                                         <div className="mt-2">
                                             <strong className="text-sm text-gray-700 dark:text-gray-300">Tech Stack:</strong>
                                             <div className="flex flex-wrap justify-center gap-2 mt-1">
-                                                {selectedProject.techStack.map((tech, index) => (
+                                                {selectedProject.tech_stack.map((tech, index) => (
                                                     <span
                                                         key={index}
                                                         className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium py-1 px-3 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600"

@@ -1,9 +1,8 @@
 import React from "react";
 import Skill from "./Skill";
-import { skills } from "./Constant";
 import { motion } from "framer-motion";
 import { upAnimation } from "./Constant";
-const Skills = () => {
+const Skills = ({skillData}) => {
 
     return (
         <div id='skills' className="h-auto md:h-screen lg:w-1/2 mx-auto ">
@@ -15,7 +14,7 @@ const Skills = () => {
             <p className="mt-1 font-light text-center font-sans text-gray-500 dark:text-gray-400 sm:text-xl">
                 Hover on the skill for proficiency.</p>
             <div className="pt-4 grid grid-cols-3 md:grid-cols-4 gap-5">
-                {skills.map((item) => {
+                {skillData.map((item) => {
                     return (
                         <Skill key={item.id} skill={item} />
                     )
