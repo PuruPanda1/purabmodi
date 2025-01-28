@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const HeroText = ({text_list}) => {
   return (
     <div className="text-start">
-      <h5 className="font-spaceGrotesk mb-2 text-5xl mt-5 md:mt-0 md:text-6xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">
+      <h5 className="font-spaceGrotesk mb-2 text-4xl mt-5 md:mt-0 md:text-6xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">
         Hello, <br />
         I'm Purab Modi, <br />
         <span className="text-blue-500 dark:text-blue-300">

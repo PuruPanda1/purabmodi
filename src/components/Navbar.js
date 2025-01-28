@@ -67,7 +67,7 @@ function Navbar() {
                         type="button"
                         className="cursor-pointer text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
                     >
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        <FontAwesomeIcon icon={faEnvelope} className="md:mr-2" />
                         <span className="hidden md:block">Get In Touch</span>
                     </Link>
                 </div>
