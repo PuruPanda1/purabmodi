@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
-import PreLoader from './components/PreLoader';
+import BlockLoader from './components/BlockLoader';
 
 function App() {
   useEffect(() => {
@@ -26,18 +26,30 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://purabmodi.pythonanywhere.com/api/portfolio/")
-      .then((response) => {
-        setData(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
+    const fetchData = async () => {
+      const startTime = Date.now(); // Record the start time
+
+      try {
+        const response = await axios.get(
+          "https://purabmodi.pythonanywhere.com/api/portfolio/"
+        );
+        const elapsedTime = Date.now() - startTime; // Time taken for the request
+        const remainingTime = Math.max(3000 - elapsedTime, 0); // Ensure at least 1s delay
+
+        setTimeout(() => {
+          setData(response.data);
+          setLoading(false);
+        }, remainingTime);
+      } catch (error) {
         console.error("Error fetching data:", error);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
-  if (loading) return <PreLoader/>;
+  if (loading) return <BlockLoader />;
 
   return (
     <div className="App dark:bg-gray-900">
