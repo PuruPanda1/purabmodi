@@ -34,7 +34,7 @@ function App() {
           "https://purabmodi.pythonanywhere.com/api/portfolio/"
         );
         const elapsedTime = Date.now() - startTime; // Time taken for the request
-        const remainingTime = Math.max(3000 - elapsedTime, 0); // Ensure at least 1s delay
+        const remainingTime = Math.max(1000 - elapsedTime, 0); // Ensure at least 1s delay
 
         setTimeout(() => {
           setData(response.data);
