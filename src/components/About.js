@@ -10,6 +10,7 @@ function About({ aboutText }) {
     "/images/pm_image_1.jpg",
     "/images/pm_image_2.jpg",
     "/images/pm_image_3.jpg",
+    "/images/pm_image_4.jpg",
   ]
   return (
     <div id='about' className='h-auto md:h-screen'>
